@@ -10,6 +10,12 @@ body {
 	background-color: $code
 }
 .tl_article {
+	::selection, ::-moz-selection {
+		background: $blue;
+	}
+	aside, .tl_article_content aside {
+		color: mix($text, $dark, 70%);
+	}
 	.tl_tooltip {
 		background-color: $tooltip;
 		.button_hover {
@@ -20,9 +26,6 @@ body {
 		}
 	}
 	user-select: $blue;
-	&::selection, &::-moz-selection {
-		background: $blue;
-	}
 	&.tl_article_edit {
 		figcaption[data-placeholder] .editable_input {
 			background-color: $dark;
@@ -65,6 +68,7 @@ body {
 	a[href] {
 		-webkit-tap-highlight-color: rgba($text, 0.44);
 		border-bottom: 0.1em solid rgba($text, 0.7);
+		color: mix($text, #fff, 85%);
 	}
 }
 .button {
