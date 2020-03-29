@@ -1,6 +1,16 @@
 $s_name: "Telegraph Dark";
 $s_ver: "1.0.0";
-$s_desc: "Just an empty UserCSS template";
+$s_desc: "Soothing Telegraph Dark Theme";
 $s_space: "telegraph-dark";
 
 $s_domain: "telegra.ph";
+
+
+// Colors
+$dark: #1d2123;
+$blue: #3d4b55;
+
+$text: #e3ded6;
+
+$code: mix($dark, #000, 80%);
+$tooltip: mix($dark, #000, 65%);

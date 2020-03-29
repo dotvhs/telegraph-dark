@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Telegraph Dark
 @version      1.0.0
-@description  Just an empty UserCSS template
+@description  Soothing Telegraph Dark Theme
 @namespace    https://github.com/dotvhs/telegraph-dark
 @author       dotvhs
 @homepageURL  https://github.com/dotvhs/telegraph-dark
@@ -11,27 +11,38 @@
 @-moz-document domain("telegra.ph") {
   body {
     background-color: #1d2123; }
-  .tl_article ::selection {
-    background: #3d4b55; }
-  .tl_article .tl_article_content,
-  .tl_article .tl_article_content .ql-editor {
-    color: #c8c4be; }
-  .tl_article .tl_article_header {
-    color: #e3ded6; }
-  .tl_article address {
-    color: #7d7c79; }
-  .tl_article .tl_article_content hr::after {
-    border-color: #333739; }
-  .tl_article a[href] {
-    -webkit-tap-highlight-color: rgba(227, 222, 214, 0.44);
-    border-bottom: 0.1em solid rgba(227, 222, 214, 0.7); }
+  .tl_article .tl_article_content code, .tl_article .tl_article_content pre {
+    background-color: #171a1c; }
+  .tl_article {
+    user-select: #3d4b55; }
+    .tl_article .tl_tooltip {
+      background-color: #131517; }
+    .tl_article::selection, .tl_article::-moz-selection {
+      background: #3d4b55; }
+    .tl_article.tl_article_edit figcaption[data-placeholder] .editable_input {
+      background-color: #1d2123; }
+    .tl_article.tl_article_edit [data-placeholder].empty::before {
+      color: rgba(227, 222, 214, 0.2); }
+    .tl_article.tl_article_edit [data-label]::after {
+      color: rgba(227, 222, 214, 0.34);
+      border-right: 1px solid rgba(227, 222, 214, 0.15); }
+    .tl_article.tl_article_edit.title_focused [data-label].empty::after {
+      color: rgba(227, 222, 214, 0.34);
+      border-right: 1px solid rgba(227, 222, 214, 0.15); }
+    .tl_article .tl_article_content, .tl_article .tl_article_content .ql-editor {
+      color: #c8c4be; }
+      .tl_article .tl_article_content hr::after, .tl_article .tl_article_content .ql-editor hr::after {
+        border-color: #333739; }
+      .tl_article .tl_article_content blockquote, .tl_article .tl_article_content .ql-editor blockquote {
+        border-left: 3px solid #3d4b55; }
+    .tl_article .tl_article_header {
+      color: #e3ded6; }
+    .tl_article address {
+      color: #7d7c79; }
+    .tl_article a[href] {
+      -webkit-tap-highlight-color: rgba(227, 222, 214, 0.44);
+      border-bottom: 0.1em solid rgba(227, 222, 214, 0.7); }
   .button {
     color: #e3ded6;
     border: 2px solid #e3ded6;
-    background-color: #1d2123; }
-  .tl_article.tl_article_edit [data-label]::after,
-  .tl_article.tl_article_edit.title_focused [data-label].empty::after {
-    color: rgba(227, 222, 214, 0.34);
-    border-right: 1px solid rgba(227, 222, 214, 0.15); }
-  .tl_article .tl_article_content blockquote {
-    border-left: 3px solid #3d4b55; } }
+    background-color: #1d2123; } }

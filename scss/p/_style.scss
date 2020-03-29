@@ -1,44 +1,69 @@
 body {
-	background-color: #1d2123;
+	background-color: $dark;
 }
 
-.tl_article ::selection {
-	background: #3d4b55;
+.buttons button::after, .buttons button::before, .tl_blocks .buttons button {
+	// filter: invert(100%);
+	// opacity: 0.7;
 }
 
-.tl_article .tl_article_content,
-.tl_article .tl_article_content .ql-editor {
-	color: #c8c4be;
+.tl_article .tl_article_content code, .tl_article .tl_article_content pre {
+	background-color: $code
 }
-
-.tl_article .tl_article_header {
-	color: #e3ded6;
+.tl_article {
+	.tl_tooltip {
+		background-color: $tooltip;
+	}
+	user-select: $blue;
+	&::selection, &::-moz-selection {
+		background: $blue;
+	}
+	&.tl_article_edit {
+		figcaption[data-placeholder] .editable_input {
+			background-color: $dark;
+		}
+		[data-placeholder].empty::before {
+			color: rgba($text, 0.2);
+		}
+		[data-label] {
+			&::after {
+				color: rgba($text, 0.34);
+				border-right: 1px solid rgba($text, 0.15);
+			}
+		}
+		&.title_focused {
+			[data-label].empty {
+				&::after {
+					color: rgba($text, 0.34);
+					border-right: 1px solid rgba($text, 0.15); 
+				}
+			}
+		}
+	}
+	.tl_article_content, .tl_article_content .ql-editor {
+		color: #c8c4be;
+		hr {
+			&::after {
+				border-color: #333739;
+			}
+		}
+		blockquote {
+			border-left: 3px solid $blue;
+		}
+	}
+	.tl_article_header {
+		color: $text;
+	}
+	address {
+		color: #7d7c79;
+	}
+	a[href] {
+		-webkit-tap-highlight-color: rgba($text, 0.44);
+		border-bottom: 0.1em solid rgba($text, 0.7);
+	}
 }
-
-.tl_article address {
-	color: #7d7c79;
-}
-
-.tl_article .tl_article_content hr::after {
-	border-color: #333739;
-}
-
-.tl_article a[href] {
-	-webkit-tap-highlight-color: rgba(#e3ded6, 0.44);
-	border-bottom: 0.1em solid rgba(#e3ded6, 0.7);
-}
-
 .button {
-	color: #e3ded6;
-	border: 2px solid #e3ded6;
+	color: $text;
+	border: 2px solid $text;
 	background-color: #1d2123;
-}
-.tl_article.tl_article_edit [data-label]::after,
-.tl_article.tl_article_edit.title_focused [data-label].empty::after {
-	color: rgba(#e3ded6, 0.34);
-	border-right: 1px solid rgba(#e3ded6, 0.15);
-}
-
-.tl_article .tl_article_content blockquote {
-	border-left: 3px solid #3d4b55;
 }
