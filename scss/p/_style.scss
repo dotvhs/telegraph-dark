@@ -3,8 +3,7 @@ body {
 }
 
 .buttons button::after, .buttons button::before, .tl_blocks .buttons button {
-	// filter: invert(100%);
-	// opacity: 0.7;
+	background-image: url("https://raw.githubusercontent.com/dotvhs/telegraph-dark/master/icons.png");
 }
 
 .tl_article .tl_article_content code, .tl_article .tl_article_content pre {
@@ -13,6 +12,12 @@ body {
 .tl_article {
 	.tl_tooltip {
 		background-color: $tooltip;
+		.button_hover {
+    	background-color: mix($blue, $tooltip, 40%);
+		}
+		button.active {
+			background-color: $blue;			
+		}
 	}
 	user-select: $blue;
 	&::selection, &::-moz-selection {
@@ -22,7 +27,7 @@ body {
 		figcaption[data-placeholder] .editable_input {
 			background-color: $dark;
 		}
-		[data-placeholder].empty::before {
+		[data-placeholder].empty::before, figcaption[data-placeholder].empty::after {
 			color: rgba($text, 0.2);
 		}
 		[data-label] {

@@ -11,17 +11,23 @@
 @-moz-document domain("telegra.ph") {
   body {
     background-color: #1d2123; }
+  .buttons button::after, .buttons button::before, .tl_blocks .buttons button {
+    background-image: url("https://raw.githubusercontent.com/dotvhs/telegraph-dark/master/icons.png"); }
   .tl_article .tl_article_content code, .tl_article .tl_article_content pre {
     background-color: #171a1c; }
   .tl_article {
     user-select: #3d4b55; }
     .tl_article .tl_tooltip {
       background-color: #131517; }
+      .tl_article .tl_tooltip .button_hover {
+        background-color: #242b30; }
+      .tl_article .tl_tooltip button.active {
+        background-color: #3d4b55; }
     .tl_article::selection, .tl_article::-moz-selection {
       background: #3d4b55; }
     .tl_article.tl_article_edit figcaption[data-placeholder] .editable_input {
       background-color: #1d2123; }
-    .tl_article.tl_article_edit [data-placeholder].empty::before {
+    .tl_article.tl_article_edit [data-placeholder].empty::before, .tl_article.tl_article_edit figcaption[data-placeholder].empty::after {
       color: rgba(227, 222, 214, 0.2); }
     .tl_article.tl_article_edit [data-label]::after {
       color: rgba(227, 222, 214, 0.34);
